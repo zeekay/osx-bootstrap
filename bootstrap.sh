@@ -2,6 +2,12 @@
 
 export PATH=~/.ellipsis/bin:/usr/local/bin:$PATH
 
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Need to install first
@@ -149,15 +155,6 @@ ellipsis install zeekay/files zeekay/vim zeekay/zsh zeekay/alfred zeekay/iterm2
 brew install rbenv ruby-build
 eval "$(rbenv init -)"
 rbenv install 1.8.7-p375
-
-# Install cask and binary applications
-brew install caskroom/cask/brew-cask
-
-# Ask for the administrator password upfront
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Add zsh to list of shells
 sudo sh -c "echo /usr/local/bin/zsh >> /etc/shells"
@@ -405,3 +402,17 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Install cask and binary applications
+brew install caskroom/cask/brew-cask
+
+brew cask install firefox
+brew cask install flash-player
+brew cask install flux
+brew cask install google-chrome
+brew cask install hyperdock
+brew cask install iterm2
+brew cask install mplayerx
+brew cask install screenhero
+brew cask install skype
+brew cask install transmission
