@@ -6,5 +6,5 @@ Install java from http://www.oracle.com/technetwork/java/javase/downloads/jdk8-d
 
 ## Install
 ```bash
-curl whatever
+curl https://raw.githubusercontent.com/zeekay/osx-bootstrap/master/bootstrap.sh | sh
 ```
