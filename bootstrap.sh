@@ -419,6 +419,8 @@ brew cask install imageoptim
 brew cask install iterm2
 brew cask install karabiner
 brew cask install mplayerx
+brew cask install onyx
+brew cask install openemu
 brew cask install screenhero
 brew cask install seil
 brew cask install simple-comic
