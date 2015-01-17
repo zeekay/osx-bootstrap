@@ -406,13 +406,23 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Install cask and binary applications
 brew install caskroom/cask/brew-cask
 
+brew cask install alfred
+brew cask install atom
 brew cask install firefox
 brew cask install flash-player
 brew cask install flux
+brew cask install geekbench
+brew cask install gfxcardstatus
 brew cask install google-chrome
 brew cask install hyperdock
+brew cask install imageoptim
 brew cask install iterm2
+brew cask install karabiner
 brew cask install mplayerx
 brew cask install screenhero
+brew cask install seil
+brew cask install simple-comic
 brew cask install skype
+brew cask install steam
 brew cask install transmission
+brew cask install xbench
